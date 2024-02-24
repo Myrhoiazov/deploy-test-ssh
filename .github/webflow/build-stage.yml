@@ -13,8 +13,8 @@ jobs:
             # Setup key
             - run: set -eu
             - run: mkdir "$HOME/.ssh"
-            - run: echo "${{ secrets.ACCESS_TOKEN }}" > "$HOME/.ssh/key"
-            - run: chmod 600 "$HOME/.ssh/key"
+            - run: echo "${{ secrets.server-key }}" > "$HOME/.ssh/server-key"
+            - run: chmod 600 "$HOME/.ssh/server-key"
             # Build - используем если есть файл установзик package.json
             # - name: Install, lint, build 🔧
             #   run: |
