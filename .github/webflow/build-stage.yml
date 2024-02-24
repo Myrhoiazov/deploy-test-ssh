@@ -24,4 +24,4 @@ jobs:
 
             # Deploy
             - name: Deploy 🚀
-            - run: cd app && rsync -e "ssh -p 20022 -i "$HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . denysmyr@denys-myr.com:21098/home/denysmyr/public_html
+            - run: cd app && rsync -e "ssh -p 20022 -i "$HOME/.ssh/server-key -o StrictHostKeyChecking=no" --archive --compress --delete . denysmyr@denys-myr.com:21098/home/denysmyr/public_html
